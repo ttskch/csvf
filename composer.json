@@ -20,14 +20,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Ttskch\\Csvf\\": "src/"
+            "Ttskch\\Csvf\\": "lib/src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Ttskch\\Csvf\\": [
-                "tests/",
-                "tests/Fake"
+                "lib/tests/",
+                "lib/tests/Fake"
             ]
         }
     },
@@ -37,8 +37,8 @@
         ],
         "tests": [
             "@cs",
-            "vendor/bin/phpmd src,tests text ./phpmd.xml",
-            "vendor/bin/phpstan analyse -l max src tests -c phpstan.neon --no-progress",
+            "vendor/bin/phpmd lib/src,lib/tests text ./phpmd.xml",
+            "vendor/bin/phpstan analyse -l max lib/src lib/tests -c phpstan.neon --no-progress",
             "@test"
         ],
         "coverage": [
@@ -46,11 +46,11 @@
         ],
         "cs": [
             "vendor/bin/php-cs-fixer fix -v --dry-run",
-            "vendor/bin/phpcs --standard=phpcs.xml src;"
+            "vendor/bin/phpcs --standard=phpcs.xml lib/src;"
         ],
         "cs-fix": [
             "vendor/bin/php-cs-fixer fix -v",
-            "vendor/bin/phpcbf src tests"
+            "vendor/bin/phpcbf lib/src lib/tests"
         ]
     }
 }

@@ -48,7 +48,7 @@ jobs:
     php: 7.2
     install: composer require --dev phpstan/phpstan-shim ^0.10;
     script:
-    - ./vendor/bin/phpstan analyse -l max -c phpstan.neon src tests --no-progress --no-interaction;
+    - ./vendor/bin/phpstan analyse -l max -c phpstan.neon lib/src lib/tests --no-progress --no-interaction;
 
   - stage: Code Quality
     name: Coding standards
