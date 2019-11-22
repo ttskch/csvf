@@ -6,4 +6,7 @@ namespace Ttskch\Csvf;
 
 class Csvf
 {
+    public function run() : void
+    {
+    }
 }
